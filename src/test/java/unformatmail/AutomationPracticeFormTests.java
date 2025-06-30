@@ -59,6 +59,7 @@ public class AutomationPracticeFormTests extends TestBase {
                 .checkResult("Mobile", "8910405406")
                 .checkResultTableAppears();
     }
+
     @Test
     void negativeFillFormTest() {
         registrationPage

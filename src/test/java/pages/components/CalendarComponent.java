@@ -1,6 +1,5 @@
 package pages.components;
 
-import pages.RegistrationPage;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
@@ -11,8 +10,6 @@ public class CalendarComponent {
         $(".react-datepicker__year-select").selectOption("1990");
         $(".react-datepicker__day.react-datepicker__day--026").click();
     }
-
-
 
 
 }
