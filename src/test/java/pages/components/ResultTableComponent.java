@@ -12,7 +12,7 @@ public class ResultTableComponent {
 
     private SelenideElement assertionTable = $(".table-responsive");
 
-    public void checkResultFormHeader(String key, String value) {
+    public void resultTable(String key, String value) {
         assertionTable.$(byText(key)).parent().shouldHave(text(value));
     }
 

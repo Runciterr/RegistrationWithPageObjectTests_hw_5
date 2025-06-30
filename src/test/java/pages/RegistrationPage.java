@@ -11,7 +11,8 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPage {
 
-    private SelenideElement firstNameInput = $("#firstName"),  //либо сделать public static
+    private SelenideElement
+            firstNameInput = $("#firstName"),  //либо сделать public static
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
             userNumberInput = $("#userNumber"),
@@ -121,7 +122,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage checkResult(String key, String value) {
-        resultTableComponent.checkResultFormHeader(key, value);
+        resultTableComponent.resultTable(key, value);
 
         return this;
     }
@@ -130,6 +131,7 @@ public class RegistrationPage {
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
     }
+
     public RegistrationPage checkResultTableNotAppears() {
         resultTableComponent.checkResultTableNotAppears();
 
