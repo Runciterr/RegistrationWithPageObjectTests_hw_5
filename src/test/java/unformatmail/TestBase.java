@@ -1,12 +1,16 @@
 package unformatmail;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import pages.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
+
+    RegistrationPage testBase = new RegistrationPage();
 
     @BeforeAll
     static void setUp() {
@@ -15,8 +19,12 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
     }
 
-    @AfterAll
-    static void tearDown() {
+    @BeforeEach
+    void eachSetUp(){
+        testBase.openPage();
+    }
+    @AfterEach
+    void eachTearDown() {
         closeWebDriver();
     }
 }
