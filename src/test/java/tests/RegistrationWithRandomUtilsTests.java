@@ -1,7 +1,6 @@
-package unformatmail;
+package tests;
 
 import com.codeborne.selenide.Configuration;
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
