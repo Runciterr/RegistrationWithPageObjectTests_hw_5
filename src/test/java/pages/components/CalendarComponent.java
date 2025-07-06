@@ -10,6 +10,4 @@ public class CalendarComponent {
         $(".react-datepicker__year-select").selectOption("1990");
         $(".react-datepicker__day.react-datepicker__day--026").click();
     }
-
-
 }
