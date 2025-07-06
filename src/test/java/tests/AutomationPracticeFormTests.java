@@ -1,4 +1,4 @@
-package tests;
+package unformatmail;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
@@ -12,7 +12,7 @@ public class AutomationPracticeFormTests extends TestBase {
     void fillAutomationFormTest() {
 
         registrationPage
-                //.openPage()
+                .openPage()
                 .setFirstName("Den")
                 .setLastName("White")
                 .setEmail("DedWhite@example.com")
@@ -46,7 +46,7 @@ public class AutomationPracticeFormTests extends TestBase {
     void positiveMinFormTest() {
 
         registrationPage
-                //.openPage()
+                .openPage()
                 .setFirstName("Den")
                 .setLastName("White")
                 .setGender("Male")
@@ -63,7 +63,7 @@ public class AutomationPracticeFormTests extends TestBase {
     @Test
     void negativeFillFormTest() {
         registrationPage
-                //.openPage()
+                .openPage()
                 .setFirstName("Den")
                 .setLastName("")
                 .setGender("Male")
