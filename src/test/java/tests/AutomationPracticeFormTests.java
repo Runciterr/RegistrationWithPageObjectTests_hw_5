@@ -3,6 +3,8 @@ package tests;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
+import static tests.TestData.*;
+
 public class AutomationPracticeFormTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
@@ -13,15 +15,16 @@ public class AutomationPracticeFormTests extends TestBase {
 
         registrationPage
                 .openPage()
-                .setFirstName("Den")
-                .setLastName("White")
-                .setEmail("DedWhite@example.com")
-                .setUserNumber("89104054060")
-                .setGender("Male")
+                .closeAdBanners()
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setEmail(email)
+                .setUserNumber(phoneNumber)
+                .setGender(gender)
                 .setDateOfBirth("26", "March", "1990")
                 .setCurrentAddress("Russia, Moscow")
-                .setSubject("English")
-                .setHobbie("Reading")
+                .setSubject(subject)
+                .setHobby(hobby)
                 .uploadPicture()
                 .setState("Rajasthan")
                 .setCity("Jaipur")
@@ -47,6 +50,7 @@ public class AutomationPracticeFormTests extends TestBase {
 
         registrationPage
                 .openPage()
+                .closeAdBanners()
                 .setFirstName("Den")
                 .setLastName("White")
                 .setGender("Male")
@@ -64,6 +68,7 @@ public class AutomationPracticeFormTests extends TestBase {
     void negativeFillFormTest() {
         registrationPage
                 .openPage()
+                .closeAdBanners()
                 .setFirstName("Den")
                 .setLastName("")
                 .setGender("Male")
