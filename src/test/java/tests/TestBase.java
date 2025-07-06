@@ -1,4 +1,4 @@
-package unformatmail;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.AfterAll;

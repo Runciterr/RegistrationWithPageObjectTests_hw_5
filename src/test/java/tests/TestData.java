@@ -1,4 +1,4 @@
-package unformatmail;
+package tests;
 
 public class TestData {
 

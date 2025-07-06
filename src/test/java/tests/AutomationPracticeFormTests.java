@@ -1,4 +1,4 @@
-package unformatmail;
+package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
@@ -13,12 +13,13 @@ public class AutomationPracticeFormTests extends TestBase {
 
         registrationPage
                 .openPage()
+                .closeAdBanners()
                 .setFirstName("Den")
                 .setLastName("White")
                 .setEmail("DedWhite@example.com")
                 .setUserNumber("89104054060")
                 .setGender("Male")
-                .setDateOfBirth("26", "March", "1990")
+                .setDateOfBirth("26", "June", "1990")
                 .setCurrentAddress("Russia, Moscow")
                 .setSubject("English")
                 .setHobbie("Reading")
@@ -33,7 +34,7 @@ public class AutomationPracticeFormTests extends TestBase {
                 .checkResult("Student Email", "DedWhite@example.com")
                 .checkResult("Gender", "Male")
                 .checkResult("Mobile", "8910405406")
-                .checkResult("Date of Birth", "26 February,1990")
+                .checkResult("Date of Birth", "26 June,1990")
                 .checkResult("Subjects", "English")
                 .checkResult("Hobbies", "Reading")
                 .checkResult("Picture", "af75334fb974303ac203acd513435cc2.jpg")
@@ -47,6 +48,7 @@ public class AutomationPracticeFormTests extends TestBase {
 
         registrationPage
                 .openPage()
+                .closeAdBanners()
                 .setFirstName("Den")
                 .setLastName("White")
                 .setGender("Male")
@@ -64,6 +66,7 @@ public class AutomationPracticeFormTests extends TestBase {
     void negativeFillFormTest() {
         registrationPage
                 .openPage()
+                .closeAdBanners()
                 .setFirstName("Den")
                 .setLastName("")
                 .setGender("Male")
