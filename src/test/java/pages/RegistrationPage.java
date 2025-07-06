@@ -101,8 +101,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage uploadPicture() {
-        pictureUpload.uploadFromClasspath("af75334fb974303ac203acd513435cc2.jpg");
+    public RegistrationPage uploadPicture(String value) {
+        pictureUpload.uploadFromClasspath(value);
 
         return this;
     }

@@ -19,29 +19,28 @@ public class AutomationPracticeFormTests extends TestBase {
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)
-                .setUserNumber(phoneNumber)
+                .setUserNumber(userNumber)
                 .setGender(gender)
-                .setDateOfBirth("26", "March", "1990")
-                .setCurrentAddress("Russia, Moscow")
+                .setDateOfBirth(day, month, year)
+                .setCurrentAddress(currentAddress)
                 .setSubject(subject)
                 .setHobby(hobby)
-                .uploadPicture()
-                .setState("Rajasthan")
-                .setCity("Jaipur")
+                .uploadPicture(picture)
+                .setState(state)
+                .setCity(city)
                 .submitForm();
 
         registrationPage
-                .checkResult("Student Name", "Den White")
-                .checkResult("Student Email", "DedWhite@example.com")
-                .checkResult("Student Email", "DedWhite@example.com")
-                .checkResult("Gender", "Male")
-                .checkResult("Mobile", "8910405406")
-                .checkResult("Date of Birth", "26 February,1990")
-                .checkResult("Subjects", "English")
-                .checkResult("Hobbies", "Reading")
-                .checkResult("Picture", "af75334fb974303ac203acd513435cc2.jpg")
-                .checkResult("Address", "Russia, Moscow")
-                .checkResult("State and City", "Rajasthan Jaipur")
+                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Student Email", email)
+                .checkResult("Gender", gender)
+                .checkResult("Mobile", userNumber)
+                .checkResult("Date of Birth", day + " " + month + "," + year)
+                .checkResult("Subjects", subject)
+                .checkResult("Hobbies", hobby)
+                .checkResult("Picture", picture)
+                .checkResult("Address", currentAddress)
+                .checkResult("State and City", state + " " + city)
                 .checkResultTableAppears();
     }
 
@@ -51,16 +50,16 @@ public class AutomationPracticeFormTests extends TestBase {
         registrationPage
                 .openPage()
                 .closeAdBanners()
-                .setFirstName("Den")
-                .setLastName("White")
-                .setGender("Male")
-                .setUserNumber("89104054060")
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setGender(gender)
+                .setUserNumber(userNumber)
                 .submitForm();
 
         registrationPage
-                .checkResult("Student Name", "Den White")
-                .checkResult("Gender", "Male")
-                .checkResult("Mobile", "8910405406")
+                .checkResult("Student Name", firstName + " " + lastName)
+                .checkResult("Gender", gender)
+                .checkResult("Mobile", userNumber)
                 .checkResultTableAppears();
     }
 
@@ -69,10 +68,10 @@ public class AutomationPracticeFormTests extends TestBase {
         registrationPage
                 .openPage()
                 .closeAdBanners()
-                .setFirstName("Den")
+                .setFirstName(firstName)
                 .setLastName("")
-                .setGender("Male")
-                .setUserNumber("89104054060")
+                .setGender(gender)
+                .setUserNumber(userNumber)
                 .submitForm();
 
         registrationPage
