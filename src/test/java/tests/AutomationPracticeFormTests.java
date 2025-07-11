@@ -1,10 +1,10 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import data.SuitTestData;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-import static data.TestData.*;
 
 public class AutomationPracticeFormTests extends TestBase {
 

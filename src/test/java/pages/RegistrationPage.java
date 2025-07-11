@@ -23,7 +23,7 @@ public class RegistrationPage {
             hobbieWrapper = $("#hobbiesWrapper"),
             pictureUpload = $("#uploadPicture"),
             stateInput = $("#state"),
-            //stateCityWrapper = $("#stateCity-wrapper"),
+            stateCityWrapper = $("#stateCity-wrapper"),
             cityInput = $("#city"),
             submitFormButton = $("#submit");
 
@@ -107,10 +107,10 @@ public class RegistrationPage {
         return this;
     }
 
+
     public RegistrationPage setState(String value) {
         stateInput.click();
-        $(byText(value)).click();
-
+        stateCityWrapper.$(byText(value)).click();
         return this;
     }
 
