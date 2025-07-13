@@ -18,7 +18,7 @@ public class TestDataGenerator {
     }
 
     public String getGender() {
-        return faker.options().option(TestData.GENDER_OPTIONS);
+        return faker.options().option(TestDataConstants.GENDER_OPTIONS);
     }
 
     public String getUserNumber() {
@@ -34,7 +34,7 @@ public class TestDataGenerator {
     }
 
     public String getMonth() {
-        return faker.options().option(TestData.MONTH_OPTIONS);
+        return faker.options().option(TestDataConstants.MONTH_OPTIONS);
     }
 
     public String getYear() {
@@ -42,36 +42,33 @@ public class TestDataGenerator {
     }
 
     public String getSubject() {
-        return faker.options().option(TestData.SUBJECT_OPTIONS);
+        return faker.options().option(TestDataConstants.SUBJECT_OPTIONS);
     }
 
     public String getHobby() {
-        return faker.options().option(TestData.HOBBY_OPTIONS);
+        return faker.options().option(TestDataConstants.HOBBY_OPTIONS);
     }
 
     public String getPicture() {
-        return faker.options().option(TestData.PICTURE);
+        return faker.options().option(TestDataConstants.PICTURE);
     }
 
     public String getState() {
-        return faker.options().option(TestData.STATE_OPTIONS);
+        return faker.options().option(TestDataConstants.STATE_OPTIONS);
     }
 
-   // public String
-   //         state = faker.options().option(TestData.STATE_OPTIONS);
 
     public String getCity(String state) {
         return getCityForState(state);
     }
 
 
-
     public static String getCityForState(String state) {
         return switch (state) {
-            case "NCR" -> faker.options().option(TestData.CITY_NCR);
-            case "Uttar Pradesh" -> faker.options().option(TestData.CITY_UTTAR_PRADESH);
-            case "Haryana" -> faker.options().option(TestData.CITY_HARYANA);
-            case "Rajasthan" -> faker.options().option(TestData.CITY_RAJASTHAN);
+            case "NCR" -> faker.options().option(TestDataConstants.CITY_NCR);
+            case "Uttar Pradesh" -> faker.options().option(TestDataConstants.CITY_UTTAR_PRADESH);
+            case "Haryana" -> faker.options().option(TestDataConstants.CITY_HARYANA);
+            case "Rajasthan" -> faker.options().option(TestDataConstants.CITY_RAJASTHAN);
             default -> null;
         };
     }

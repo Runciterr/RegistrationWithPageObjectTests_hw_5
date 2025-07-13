@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import data.SuitTestData;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
@@ -9,10 +8,10 @@ import pages.RegistrationPage;
 public class AutomationPracticeFormTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
-    SuitTestData data = new SuitTestData();
 
     @Test
     void fillAutomationFormTest() {
+        SuitTestData data = new SuitTestData();
 
         registrationPage
                 .openPage()
@@ -48,6 +47,7 @@ public class AutomationPracticeFormTests extends TestBase {
     @Test
     void positiveMinFormTest() {
 
+        SuitTestData data = new SuitTestData();
         registrationPage
                 .openPage()
                 .closeAdBanners()
@@ -66,6 +66,8 @@ public class AutomationPracticeFormTests extends TestBase {
 
     @Test
     void negativeFillFormTest() {
+
+        SuitTestData data = new SuitTestData();
         registrationPage
                 .openPage()
                 .closeAdBanners()

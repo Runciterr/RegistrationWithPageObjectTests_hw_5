@@ -1,6 +1,6 @@
 package data;
 
-public class TestData {
+public class TestDataConstants {
 
     public static String[] GENDER_OPTIONS = {
             "Male", "Female", "Other"
